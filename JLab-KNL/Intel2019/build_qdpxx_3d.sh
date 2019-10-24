@@ -7,7 +7,8 @@
 ENV_SCRIPT=env.Intel2019.sh
 source ./${ENV_SCRIPT}
 
-precision=$ENV_PRECISION
+precision=single
+#precision=$ENV_PRECISION
 
 BUILD_TAG=${precision}-prec
 
