@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #################
-# BUILD Hardron
+# BUILD Adat
 #################
 
 ENV_SCRIPT=env.Intel2019.sh
