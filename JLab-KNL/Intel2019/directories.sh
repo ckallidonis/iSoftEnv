@@ -8,6 +8,7 @@ CHROMA_DIST=chroma
 CHROMA_GENPROP_DIST=chroma-devel-genprop
 QMP_DIST=qmp
 QDP_DIST=qdpxx
+QDP3D_DIST=qdpxx_3d
 LIBXML2_DIST=libxml2-2.9.9
 QPHIX_DIST=qphix
 MGPROTO_DIST=mg_proto
@@ -32,6 +33,10 @@ QMP_INSTALL=${INSTALL_TOP}/${QMP_DIST}
 # QDP directories
 QDP_SRC=${SRC_TOP}/${QDP_DIST}
 QDP_INSTALL=${INSTALL_TOP}/${QDP_DIST}
+
+# QDP-3D directories (Source code is same as QDP, installation is different)
+QDP3D_SRC=${SRC_TOP}/${QDP_DIST}
+QDP3D_INSTALL=${INSTALL_TOP}/${QDP3D_DIST}
 
 # libxml2 directories
 LIBXML2_SRC=${SRC_TOP}/${LIBXML2_DIST}
