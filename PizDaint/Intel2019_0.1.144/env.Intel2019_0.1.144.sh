@@ -39,11 +39,11 @@ echo "MKL LDFLAGS......:" $MKL_LDFLAGS
 echo "MKL LINK FLAGS...:" $MKL_LINK
 
 
-export PK_QPHIX_ISA="avx512"
+export PK_QPHIX_ISA="avx2"
 export PK_KOKKOS_HOST_ARCH="SKL"
 #ARCHFLAGS=" -march=knl "
-ARCHFLAGS=" -xCORE-AVX512 "
-export PK_AVX_VERSION="AVX512"
+ARCHFLAGS=" -xCORE-AVX2 "
+export PK_AVX_VERSION="AVX2"
 
 #PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++14 -stdlib=libc++ -Drestrict=__restrict__ "${ARCHFLAGS}
 export PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++14 "${ARCHFLAGS}
