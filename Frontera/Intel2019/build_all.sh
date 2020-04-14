@@ -64,7 +64,21 @@ echo -e "\n##### ${prog} DONE #####\n"
 
 sleep 2
 
+prog=adat-devel-pdf
+echo -e "\n##### Building ${prog} #####\n"
+./build_${prog}.sh
+echo -e "\n##### ${prog} DONE #####\n"
+
+sleep 2
+
 prog=colorvec
+echo -e "\n##### Building ${prog} #####\n"
+./build_${prog}.sh
+echo -e "\n##### ${prog} DONE #####\n"
+
+sleep 2
+
+prog=colorvec-devel-pdf
 echo -e "\n##### Building ${prog} #####\n"
 ./build_${prog}.sh
 echo -e "\n##### ${prog} DONE #####\n"
@@ -86,6 +100,13 @@ echo -e "\n##### ${prog} DONE #####\n"
 sleep 2
 
 prog=redstar
+echo -e "\n##### Building ${prog} #####\n"
+./build_${prog}.sh
+echo -e "\n##### ${prog} DONE #####\n"
+
+sleep 2
+
+prog=redstar-devel-pdf
 echo -e "\n##### Building ${prog} #####\n"
 ./build_${prog}.sh
 echo -e "\n##### ${prog} DONE #####\n"
