@@ -1,0 +1,4 @@
+ensem/ensem_xmlio.o: \
+ /work/04587/kallidoc/frontera/software/src/adat-devel-pdf/lib/ensem/ensem_xmlio.cc \
+ /usr/include/stdc-predef.h \
+ /work/04587/kallidoc/frontera/software/src/adat-devel-pdf/lib/ensem/ensem.h
