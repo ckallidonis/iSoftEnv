@@ -22,7 +22,7 @@ export OMPFLAGS="-fopenmp "
 export OMPENABLE="--enable-openmp"
 
 PD_MKL_INC=${MKLROOT}/include
-PD_MKL_LIB=${MKLROOT}/lib/intel64
+PD_MKL_LIB=${MKLROOT}/lib/intel64_lin
 
 export MKL_INC=" -I${PD_MKL_INC}"
 export MKL_LDFLAGS=" -L${PD_MKL_LIB}"
@@ -38,6 +38,8 @@ echo "MKL INCLUDE FLAGS:" $MKL_INC
 echo "MKL LDFLAGS......:" $MKL_LDFLAGS
 echo "MKL LINK FLAGS...:" $MKL_LINK
 
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${PD_MKL_LIB}
+
 
 export PK_QPHIX_ISA="avx2"
 export PK_KOKKOS_HOST_ARCH="SKL"
@@ -52,10 +54,15 @@ export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=c99 "${ARCHFLAGS}" "
 export PK_CXXFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c++14 "${ARCHFLAGS}
 export PK_CFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c99 "${ARCHFLAGS}" "
 
-# Compilers for compiling package (passed as CC to ./configure throghout) 
+# Compilers for compiling package (passed as CC to ./configure throghout)
+# cc and CC are drivers/wrappers that point to the correct compilers based on the Programming Environment loaded
 export PK_FF="ifort"
 export PK_CC="cc"
 export PK_CXX="CC"
+
+# Tensor package needs explicitly the compilers
+export TENSOR_PK_CC=icc
+export TENSOR_PK_CXX=icpc
 
 export PK_HOST_CXX=icpc
 export PK_HOST_CXXFLAGS="-g -O3 -std=c++11 "
