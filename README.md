@@ -23,6 +23,7 @@ The `-s` option is required, whereas the `-p` option is optional and defaults to
 After modifying "env.sh" and "directories.sh" according to the desired environment and directory setup, the user can build the software packages by running corresponding build_<soft_pack>.sh script. In general, the build options are the only part of this script that could need modifications by the user, and the user should make sure that the default options of the script are as required.
 
 
-## Author
+## Author and Contact
 
 * **Christos Kallidonis** - College of William & Mary
+* Web: [http://christoskallidonis.com](http://christoskallidonis.com).
