@@ -22,7 +22,6 @@ REDSTAR_DIST=redstar
 ADAT_PDF_DIST=adat-devel-pdf
 COLORVEC_PDF_DIST=colorvec-devel-pdf
 REDSTAR_PDF_DIST=redstar-devel-pdf
-LLVM_DIST=llvm-8.0.0
 
 # Generic directories
 TOPDIR=/users/kallidoc/software
@@ -100,10 +99,6 @@ COLORVEC_PDF_INSTALL=${INSTALL_TOP}/${COLORVEC_PDF_DIST}
 # REDSTAR-PDF directories
 REDSTAR_PDF_SRC=${SRC_TOP}/${REDSTAR_PDF_DIST}
 REDSTAR_PDF_INSTALL=${INSTALL_TOP}/${REDSTAR_PDF_DIST}
-
-# LLVM directories
-LLVM_SRC=${SRC_TOP}/${LLVM_DIST}
-LLVM_INSTALL=${INSTALL_TOP}/${LLVM_DIST}
 
 
 # Build files directory
