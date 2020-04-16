@@ -67,6 +67,12 @@ export TENSOR_PK_CXX=icpc
 export PK_HOST_CXX=icpc
 export PK_HOST_CXXFLAGS="-g -O3 -std=c++11 "
 
+
+# CUDA
+PK_CUDA_HOME=${CUDATOOLKIT_HOME}
+
+
+
 #PK_HOST_CXX=clang++
 #PK_HOST_CXXFLAGS="-g -O3 -std=c++11 -stdlib=libc++"
 
