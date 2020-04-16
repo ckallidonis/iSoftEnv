@@ -6,6 +6,8 @@
 DIST_DIRECTORIES=/users/kallidoc/software/util/iSoftEnv/PizDaint/GCC_8.3.0/directories.sh
 source ${DIST_DIRECTORIES}
 
+export ENV_PRECISION=double
+
 ulimit -c
 
 
@@ -22,10 +24,26 @@ export PK_CFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c99 "
 # Compilers for compiling package (passed as CC to ./configure throghout)
 # cc and CC are drivers/wrappers that point to the correct compilers based on the Programming Environment loaded
 export PK_FF="/opt/gcc/8.3.0/bin/gfortran"
-export PK_CC="/opt/gcc/8.3.0/bin/gcc"
-export PK_CXX="/opt/gcc/8.3.0/bin/g++"
+export PK_CC_SERIAL="/opt/gcc/8.3.0/bin/gcc"
+export PK_CXX_SERIAL="/opt/gcc/8.3.0/bin/g++"
 
+export PK_CC="cc"
+export PK_CXX="CC"
+
+
+# CUDA
+export PK_CUDA_HOME=${CUDATOOLKIT_HOME}
+
+# GNU / CRAY-MPICH directories
+export CRAY_MPI_LIBS=$CRAY_MPICH2_DIR/lib
 export CC_LIBS=/opt/gcc/8.3.0/snos/lib64
+
+
+# QDP-JIT related variables
+export QDPJIT_LDFLAGS="${OMPFLAGS} -L${CRAY_MPI_LIBS} -L${LLVM_INSTALL}/lib -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64  -Wl,-rpath=${LLVM_INSTALL}/lib -Wl,-rpath=${PK_CUDA_HOME}/lib64 -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${CRAY_MPI_LIBS} -Wl,-rpath=${CC_LIBS}"
+export QDPJIT_LIBS="-ldl -pthread -lmpich -lmpich_gnu_82"
+export QDPJIT_INC="-I${CRAY_MPICH2_DIR}/include"
+
 
 # Make
 PK_TARGET_JN="8"
