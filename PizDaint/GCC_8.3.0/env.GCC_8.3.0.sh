@@ -44,6 +44,8 @@ export QDPJIT_LDFLAGS="${OMPFLAGS} -L${CRAY_MPI_LIBS} -L${LLVM_INSTALL}/lib -L${
 export QDPJIT_LIBS="-ldl -pthread -lmpich -lmpich_gnu_82"
 export QDPJIT_INC="-I${CRAY_MPICH2_DIR}/include"
 
+export CHROMA_LIBS="-lcublas -lcudart ${QDPJIT_LIBS}"
+export CHROMA_LDFLAGS="${QDPJIT_LDFLAGS}"
 
 # Make
 PK_TARGET_JN="8"
