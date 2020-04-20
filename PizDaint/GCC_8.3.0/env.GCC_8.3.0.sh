@@ -33,10 +33,19 @@ export PK_CXX="CC"
 
 # CUDA
 export PK_CUDA_HOME=${CUDATOOLKIT_HOME}
+export SM=sm_60
 
 # GNU / CRAY-MPICH directories
 export CRAY_MPI_LIBS=$CRAY_MPICH2_DIR/lib
 export CC_LIBS=/opt/gcc/8.3.0/snos/lib64
+
+export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${CRAY_MPI_LIBS}:${LD_LIBRARY_PATH}
+echo $LD_LIBRARY_PATH
+
+#LLVM
+export LLVM_CXXFLAGS="-O3 -std=c++11"
+export LLVM_CXXFLAGS="-O3 -std=c99"
+
 
 
 # QDP-JIT related variables
