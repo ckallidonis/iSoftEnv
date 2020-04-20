@@ -4,6 +4,7 @@ BUILD_DIST=GCC_8.3.0
 
 # Package distribution names
 QMP_DIST=qmp_jit
+LIBXML2_DIST=libxml2
 LLVM_DIST=llvm-8.0.0
 QDPJIT_DIST=qdp-jit-llvm-nvptx
 CHROMA_DIST=chroma_jit
@@ -21,6 +22,10 @@ QMP_INSTALL=${INSTALL_TOP}/${QMP_DIST}
 # LLVM directories
 LLVM_SRC=${SRC_TOP}/${LLVM_DIST}
 LLVM_INSTALL=${INSTALL_TOP}/${LLVM_DIST}
+
+# LIBXML2 directories
+LIBXML2_SRC=${SRC_TOP}/${LIBXML2_DIST}
+LIBXML2_INSTALL=${INSTALL_TOP}/${LIBXML2_DIST}
 
 # QDP-JIT directories
 QDPJIT_SRC=${SRC_TOP}/${QDPJIT_DIST}
