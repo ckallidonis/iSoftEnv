@@ -39,6 +39,8 @@ export SM=sm_60
 export CRAY_MPI_LIBS=$CRAY_MPICH2_DIR/lib
 export CC_LIBS=/opt/gcc/8.3.0/snos/lib64
 
+# PATH / LD_LIBRARY_PATH
+export PATH=${LLVM_INSTALL}/bin:${PATH}
 export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${CRAY_MPI_LIBS}:${LD_LIBRARY_PATH}
 echo $LD_LIBRARY_PATH
 
