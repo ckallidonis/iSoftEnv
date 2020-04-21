@@ -16,10 +16,10 @@ export OMPFLAGS="-fopenmp "
 export OMPENABLE="--enable-openmp"
 
 export PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++11 "
-export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=c99 "
+export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=gnu99 "
 
 export PK_CXXFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c++11 "
-export PK_CFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c99 "
+export PK_CFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=gnu99 "
 
 # Compilers for compiling package (passed as CC to ./configure throghout)
 # cc and CC are drivers/wrappers that point to the correct compilers based on the Programming Environment loaded
@@ -47,7 +47,6 @@ echo $LD_LIBRARY_PATH
 #LLVM
 export LLVM_CXXFLAGS="-O3 -std=c++11"
 export LLVM_CXXFLAGS="-O3 -std=c99"
-
 
 
 # QDP-JIT related variables
