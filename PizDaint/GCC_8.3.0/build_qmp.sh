@@ -21,10 +21,10 @@ BUILD_FILES_DIST=build_${QMP_DIST}
 
 if [ -d ${BUILD_FILES_DIST} ]; 
 then 
-  rm -rf ${BUILD_FILES_DIST}
+  rm -vrf ${BUILD_FILES_DIST}
 fi
 
-mkdir  ${BUILD_FILES_DIST}
+mkdir -v ${BUILD_FILES_DIST}
 cd ${BUILD_FILES_DIST}
 
 
@@ -37,6 +37,7 @@ mkdir -p ${PKG_INSTALL}
 ${PKG_SRC}/configure --prefix=${PKG_INSTALL} \
     CC="${PK_CC}" \
     CFLAGS="${PK_CFLAGS}" \
+    LDFLAGS="${QDPJIT_LDFLAGS}" \
     --host=x86_64-linux-gnu \
     --build=none \
     --with-qmp-comms-type=MPI \
