@@ -38,12 +38,12 @@ export PK_CUDA_HOME=${TACC_CUDA_DIR}
 export SM=sm_60
 
 # GNU / CRAY-MPICH directories
-export CRAY_MPI_LIBS=$MPI_ROOT/lib64
+export MPI_LIBS=$MPI_ROOT/lib64
 export CC_LIBS=/opt/apps/gcc/8.3.0/lib64
 
 # PATH / LD_LIBRARY_PATH
 export PATH=${LLVM_INSTALL}/bin:${PATH}
-export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${CRAY_MPI_LIBS}:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${MPI_LIBS}:${LD_LIBRARY_PATH}
 echo $LD_LIBRARY_PATH
 
 #LLVM
@@ -52,9 +52,9 @@ export LLVM_CXXFLAGS="-O3 -std=c99"
 
 
 # QDP-JIT related variables
-export QDPJIT_LDFLAGS="${OMPFLAGS} -L${CRAY_MPI_LIBS} -L${LLVM_INSTALL}/lib -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64  -Wl,-rpath=${LLVM_INSTALL}/lib -Wl,-rpath=${PK_CUDA_HOME}/lib64 -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${CRAY_MPI_LIBS} -Wl,-rpath=${CC_LIBS}"
+export QDPJIT_LDFLAGS="${OMPFLAGS} -L${MPI_LIBS} -L${LLVM_INSTALL}/lib -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64  -Wl,-rpath=${LLVM_INSTALL}/lib -Wl,-rpath=${PK_CUDA_HOME}/lib64 -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${MPI_LIBS} -Wl,-rpath=${CC_LIBS}"
 export QDPJIT_LIBS="-ldl -pthread -lmpich"
-export QDPJIT_INC="-I${CRAY_MPICH2_DIR}/include"
+export QDPJIT_INC="-I${MPI_ROOT}/include"
 
 export CHROMA_LIBS="-lcublas -lcudart ${QDPJIT_LIBS}"
 export CHROMA_LDFLAGS="${QDPJIT_LDFLAGS}"
