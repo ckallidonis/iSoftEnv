@@ -30,6 +30,8 @@ export PK_CXX_SERIAL="/opt/gcc/8.3.0/bin/g++"
 export PK_CC="cc"
 export PK_CXX="CC"
 
+export PK_CMAKE=/users/kallidoc/software/install/GCC_8.3.0/cmake-3.17.1/bin/cmake
+
 
 # CUDA
 export PK_CUDA_HOME=${CUDATOOLKIT_HOME}
