@@ -8,7 +8,8 @@ LIBXML2_DIST=libxml2
 LLVM_DIST=llvm-8.0.0
 QDPJIT_DIST=qdp-jit-llvm-nvptx
 CHROMA_DIST=chroma_jit
-QUDA_DIST=quda
+QUDA_DIST=quda_jit
+EIGEN_DIST=eigen-3.3.7
 
 # Generic directories
 TOPDIR=/users/kallidoc/software
@@ -38,6 +39,9 @@ CHROMA_INSTALL=${INSTALL_TOP}/${CHROMA_DIST}
 # QUDA directories
 QUDA_SRC=${SRC_TOP}/${QUDA_DIST}
 QUDA_INSTALL=${INSTALL_TOP}/${QUDA_DIST}
+
+# Eigen directories
+EIGEN_SRC=${SRC_TOP}/${EIGEN_DIST}
 
 # Build files directory
 BUILDDIR=${INSTALL_TOP}/build_files
