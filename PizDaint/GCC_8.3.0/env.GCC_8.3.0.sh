@@ -15,8 +15,8 @@ ulimit -c
 export OMPFLAGS="-fopenmp "
 export OMPENABLE="--enable-openmp"
 
-export PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++11 "
-export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=gnu99 "
+export PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++14 "
+export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=c99 "
 
 export PK_CXXFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=c++11 "
 export PK_CFLAGS_NOOPT=${OMPFLAGS}"-O3 -std=gnu99 "
@@ -42,13 +42,13 @@ export CRAY_MPI_LIBS=$CRAY_MPICH2_DIR/lib
 export CC_LIBS=/opt/gcc/8.3.0/snos/lib64
 
 # PATH / LD_LIBRARY_PATH
-export PATH=${LLVM_INSTALL}/bin:${PATH}
+export PATH=${LLVM_INSTALL}/bin:/opt/gcc/8.3.0/snos/bin:${PATH}
 export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${CRAY_MPI_LIBS}:${LD_LIBRARY_PATH}
 echo $LD_LIBRARY_PATH
 
 #LLVM
 export LLVM_CXXFLAGS="-O3 -std=c++11"
-export LLVM_CXXFLAGS="-O3 -std=c99"
+export LLVM_CFLAGS="-O3 -std=c99"
 
 
 # QDP-JIT related variables
