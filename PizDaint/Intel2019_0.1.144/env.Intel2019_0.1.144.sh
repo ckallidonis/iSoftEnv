@@ -70,21 +70,21 @@ export PK_HOST_CXXFLAGS="-g -O3 -std=c++11 "
 
 # CUDA
 PK_CUDA_HOME=${CUDATOOLKIT_HOME}
-
-
-
-#PK_HOST_CXX=clang++
-#PK_HOST_CXXFLAGS="-g -O3 -std=c++11 -stdlib=libc++"
-
-#GNU Wrappers
-#PK_CC=mpicc
-#PK_CXX=mpicxx
-#PK_CC="mpicc -cc=icc "
-#PK_CXX="mpicxx -CC=icpc "
+export SM=sm_60
 
 
 # cmake
-#export CMAKE=/home/kallidoc/work_JLabLQCD/software/install/Intel2019_LatestDevel/cmake-3.15.4/bin/cmake
+export PK_CMAKE=/users/kallidoc/software/install/Intel2019_0.1.144_devel/cmake-3.17.1/bin/cmake
+
+
+# GNU-GCC (might be needed...)
+GNU_GCC_DIR=/opt/gcc/8.3.0/snos
+CC_LIBS=${GNU_GCC_DIR}/lib64
+
+# PATH / LD_LIBRARY_PATH
+export PATH=${GNU_GCC_DIR}/bin:${PATH}
+export LD_LIBRARY_PATH=${PK_CUDA_HOME}/nvvm/lib64:${PK_CUDA_HOME}/lib64:${CC_LIBS}:${LD_LIBRARY_PATH}
+
 
 # Make
 PK_TARGET_JN="8"
