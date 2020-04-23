@@ -9,7 +9,7 @@ LLVM_DIST=llvm-8.0.0
 QDPJIT_DIST=qdp-jit-llvm-nvptx
 CHROMA_DIST=chroma_jit
 QUDA_DIST=quda_jit
-EIGEN_DIST=eigen-3.3.7
+EIGEN_DIST=eigen-3.3.4
 
 # Generic directories
 TOPDIR=/users/kallidoc/software
