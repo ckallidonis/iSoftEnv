@@ -46,12 +46,13 @@ mkdir -p ${PKG_INSTALL}
 ###
 ${PKG_SRC}/configure --prefix=${PKG_INSTALL} \
     --with-qdp=${QDPJIT_INSTALL}/${QDPJIT_BTAG} \
-    --with-qmp=${QMP_INSTALL} \
+    --with-qmp=${QMP_INSTALL_GNU} \
     ${OMPENABLE} \
     CC="${PK_CC}"  CXX="${PK_CXX}" \
     CXXFLAGS="${PK_CXXFLAGS} " CFLAGS="${PK_CFLAGS} " \
-    LDFLAGS="${CHROMA_LDFLAGS} " \
-    LIBS="${CHROMA_LIBS}" \
+    LDFLAGS="${JIT_LDFLAGS} " \
+    LIBS="-lcublas -lcudart ${JIT_LIBS}" \
+    --enable-jit-clover \
     --host=x86_64-linux-gnu --build=none \
     --with-cuda=${PK_CUDA_HOME} \
     --enable-quda-deviface \
