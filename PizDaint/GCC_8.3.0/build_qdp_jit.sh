@@ -126,8 +126,8 @@ echo $LD_LIBRARY_PATH
 
 ${PKG_SRC}/configure \
           --prefix=${PKG_INSTALL} \
-          --with-libxml2=${LIBXML2_INSTALL} \
-          --with-qmp=${QMP_INSTALL} \
+          --with-libxml2=${LIBXML2_INSTALL_GNU} \
+          --with-qmp=${QMP_INSTALL_GNU} \
           --enable-comm-split-deviceinit \
           --enable-parallel-arch=parscalar \
           --enable-precision="${precision}" \
@@ -139,10 +139,10 @@ ${PKG_SRC}/configure \
           --disable-filedb \
           --with-cuda=${PK_CUDA_HOME} \
           --with-llvm=${LLVM_INSTALL} \
-          CXXFLAGS="${PK_CXXFLAGS} ${QDPJIT_INC}" \
-          CFLAGS="${PK_CFLAGS} ${QDPJIT_INC}" \
-          LDFLAGS="${QDPJIT_LDFLAGS}" \
-          LIBS="${QDPJIT_LIBS}" \
+          CXXFLAGS="${PK_CXXFLAGS} ${JIT_INC}" \
+          CFLAGS="${PK_CFLAGS} ${JIT_INC}" \
+          LDFLAGS="${JIT_LDFLAGS}" \
+          LIBS="${JIT_LIBS}" \
           CXX="${PK_CXX}" \
           CC="${PK_CC}" \
           --host=x86_64-linux-gnu --build=none \
