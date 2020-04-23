@@ -9,10 +9,10 @@ CHROMA_GENPROP_DIST=chroma-devel-genprop
 QMP_DIST=qmp
 QDP_DIST=qdpxx
 QDP3D_DIST=qdpxx_3d
-LIBXML2_DIST=libxml2-2.9.9
+LIBXML2_DIST=libxml2
 QPHIX_DIST=qphix
 MGPROTO_DIST=mg_proto
-EIGEN_DIST=eigen-3.3.7
+EIGEN_DIST=eigen-3.3.4
 HADRON_DIST=hadron
 TENSOR_DIST=tensor
 ADAT_DIST=adat
@@ -22,12 +22,14 @@ REDSTAR_DIST=redstar
 ADAT_PDF_DIST=adat-devel-pdf
 COLORVEC_PDF_DIST=colorvec-devel-pdf
 REDSTAR_PDF_DIST=redstar-devel-pdf
+QUDA_DIST=quda
+QUDA_JIT_DIST=quda_jit
+
 
 # Generic directories
 TOPDIR=/users/kallidoc/software
 SRC_TOP=${TOPDIR}/src
 INSTALL_TOP=${TOPDIR}/install/${BUILD_DIST}
-
 
 # QMP directories
 QMP_SRC=${SRC_TOP}/${QMP_DIST}
@@ -99,6 +101,14 @@ COLORVEC_PDF_INSTALL=${INSTALL_TOP}/${COLORVEC_PDF_DIST}
 # REDSTAR-PDF directories
 REDSTAR_PDF_SRC=${SRC_TOP}/${REDSTAR_PDF_DIST}
 REDSTAR_PDF_INSTALL=${INSTALL_TOP}/${REDSTAR_PDF_DIST}
+
+# QUDA directories
+QUDA_SRC=${SRC_TOP}/${QUDA_DIST}
+QUDA_INSTALL=${INSTALL_TOP}/${QUDA_DIST}
+
+# QUDA-JIT directories
+QUDA_JIT_SRC=${SRC_TOP}/${QUDA_JIT_DIST}
+QUDA_JIT_INSTALL=${INSTALL_TOP}/${QUDA_JIT_DIST}
 
 
 # Build files directory
