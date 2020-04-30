@@ -14,7 +14,7 @@ EIGEN_DIST=eigen-3.3.4
 # Generic directories
 TOPDIR=/users/kallidoc/software
 SRC_TOP=${TOPDIR}/src
-INSTALL_TOP=${TOPDIR}/install/${BUILD_DIST}
+INSTALL_TOP=$SCRATCH/software/install/${BUILD_DIST}
 
 # QMP directories
 QMP_SRC=${SRC_TOP}/${QMP_DIST}
