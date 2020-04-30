@@ -136,7 +136,7 @@ ${PKG_SRC}/configure \
           --enable-dml-output-buffering \
           --enable-llvm8 \
           --disable-generics \
-          --disable-filedb \
+          --enable-filedb \
           --with-cuda=${PK_CUDA_HOME} \
           --with-llvm=${LLVM_INSTALL} \
           CXXFLAGS="${PK_CXXFLAGS} ${JIT_INC}" \
