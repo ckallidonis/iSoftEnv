@@ -1,0 +1,62 @@
+#/bin/bash
+
+# Set up environment
+
+# Set up compilers and compiler flags
+DIST_DIRECTORIES=/gpfs/alpine/phy138/scratch/kallidoc/software/util/iSoftEnv/Summit/GCC_8.1.1_SpectrumMPI/directories.sh
+source ${DIST_DIRECTORIES}
+
+export ENV_PRECISION=double
+
+ulimit -c
+
+
+# OpenMP
+export OMPFLAGS="-fopenmp "
+export OMPENABLE="--enable-openmp"
+
+export PK_CXXFLAGS=${OMPFLAGS}"-g -O3 -std=c++14 "
+export PK_CFLAGS=${OMPFLAGS}"-g -O3 -std=c99 "
+
+# Compilers for compiling package (passed as CC to ./configure throghout)
+# cc and CC are drivers/wrappers that point to the correct compilers based on the Programming Environment loaded
+GNU_GCC_DIR=/sw/summit/gcc/8.1.1
+export CC_LIBS=${GNU_GCC_DIR}/lib64
+
+export PK_FF="${GNU_GCC_DIR}/bin/gfortran"
+
+export PK_CC="mpicc"
+export PK_CXX="mpic++"
+
+export PK_CMAKE=cmake
+
+
+# CUDA
+export PK_CUDA_HOME=${CUDA_TOOLKIT_ROOT_DIR}
+export SM=sm_70
+
+
+# PATH / LD_LIBRARY_PATH
+export PATH=${LLVM_INSTALL}/bin:${GNU_GCC_DIR}/bin:${PATH}
+export LD_LIBRARY_PATH=${LLVM_INSTALL}/lib:${PK_CUDA_HOME}/nvvm/lib64:${CC_LIBS}:${LD_LIBRARY_PATH}
+echo $LD_LIBRARY_PATH
+
+
+#LLVM
+export QDPJIT_HOST_ARCH="PowerPC;NVPTX"
+export PK_CC_LLVM="${GNU_GCC_DIR}/bin/gcc"
+export PK_CXX_LLVM="${GNU_GCC_DIR}/bin/g++"
+export LLVM_CXXFLAGS="-O3 -std=c++11"
+export LLVM_CFLAGS="-O3 -std=c99"
+
+
+# QDP-JIT related variables
+export JIT_LDFLAGS="${OMPFLAGS} -L${LLVM_INSTALL}/lib -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64  -Wl,-rpath=${LLVM_INSTALL}/lib -Wl,-rpath=${PK_CUDA_HOME}/lib64  -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${CC_LIBS}"
+export JIT_LIBS="-ldl -pthread" # -lmpich -lmpich_gnu_82"
+export JIT_INC=""
+
+# Make
+PK_TARGET_JN="8"
+export MAKE="make -j ${PK_TARGET_JN}" 
+
+export ENV_IBM_XL=1

@@ -1,6 +1,6 @@
 #/bin/bash
 
-BUILD_DIST=IBM_XL-16.1.1-5
+BUILD_DIST=GCC_8.1.1_SpectrumMPI
 
 # Package distribution names
 QMP_DIST=qmp
@@ -14,7 +14,7 @@ EIGEN_DIST=eigen-3.3.4
 # Generic directories
 TOPDIR=/gpfs/alpine/phy138/scratch/kallidoc/software
 SRC_TOP=${TOPDIR}/src
-INSTALL_TOP=$SCRATCH/software/install/${BUILD_DIST}
+INSTALL_TOP=${TOPDIR}/install/${BUILD_DIST}
 
 # QMP directories
 QMP_SRC=${SRC_TOP}/${QMP_DIST}
