@@ -6,7 +6,7 @@ module unload python2/2.7.16
 module load python3/3.7.0
 
 # Set up compilers and compiler flags
-DIST_DIRECTORIES=/work/04587/kallidoc/frontera/software/install/iSoftEnv/Frontera/Intel2019/directories.sh
+DIST_DIRECTORIES=/scratch3/projects/phy20014/kallidoc/work/software/util/iSoftEnv/Frontera/Intel2019/directories.sh
 source ${DIST_DIRECTORIES}
 
 ulimit -c
