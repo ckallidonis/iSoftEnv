@@ -1,6 +1,7 @@
 #/bin/bash
 
 # Set up environment
+module switch PrgEnv-cray/6.0.8 PrgEnv-gnu/6.0.8
 module load gcc/8.3.0
 module load cudatoolkit/10.2.89_3.28-7.0.2.1_2.17__g52c0314
 
