@@ -5,16 +5,16 @@ BUILD_DIST=GCC_8.3.0
 # Package distribution names
 QMP_DIST=qmp_jit
 LIBXML2_DIST=libxml2
-LLVM_DIST=llvm-8.0.0.GNU
-QDPJIT_DIST=qdp-jit-llvm-nvptx-GNU
-CHROMA_DIST=chroma_jit
-QUDA_DIST=quda_jit
+LLVM_DIST=llvm-8.0.0
+QDPJIT_DIST=qdp-jit-llvm-nvptx
+CHROMA_DIST=chroma
+QUDA_DIST=quda
 EIGEN_DIST=eigen-3.3.4
 
 # Generic directories
-TOPDIR=/users/kallidoc/software
+TOPDIR=/scratch/snx3000/kallidoc/software
 SRC_TOP=${TOPDIR}/src
-INSTALL_TOP=$SCRATCH/software/install/${BUILD_DIST}
+INSTALL_TOP=${TOPDIR}/install/${BUILD_DIST}
 
 # QMP directories
 QMP_SRC=${SRC_TOP}/${QMP_DIST}
