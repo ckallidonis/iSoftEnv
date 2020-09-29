@@ -30,7 +30,7 @@ export PK_FF="/opt/gcc/8.3.0/bin/gfortran"
 export PK_CC="cc"
 export PK_CXX="CC"
 
-export PK_CMAKE=/users/kallidoc/software/install/GCC_8.3.0/cmake-3.17.1/bin/cmake
+export PK_CMAKE=/users/kallidoc/build/bin/cmake
 
 
 # CUDA
