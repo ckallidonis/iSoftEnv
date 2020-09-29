@@ -1,6 +1,8 @@
 #/bin/bash
 
 # Set up environment
+module load gcc/8.3.0
+module load cudatoolkit/10.2.89_3.28-7.0.2.1_2.17__g52c0314
 
 # Set up compilers and compiler flags
 DIST_DIRECTORIES=/users/kallidoc/software/util/iSoftEnv/PizDaint/GCC_8.3.0/directories.sh
