@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/users/kallidoc/software/util/python_modules/lib/python3.6/site-packages')
+
 import git
 import optparse
 from git import RemoteProgress
@@ -7,7 +10,6 @@ class CloneProgress(RemoteProgress):
         if message:
             print(message)
 #--------------------------------------
-
 
 # Repository url's
 Repos = { 'adat'              : 'git@github.com:JeffersonLab/adat.git',
