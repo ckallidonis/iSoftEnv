@@ -3,12 +3,12 @@
 BUILD_DIST=GCC_8.3.0
 
 # Package distribution names
-QMP_DIST=qmp_jit
+QMP_DIST=qmp
 LIBXML2_DIST=libxml2
 LLVM_DIST=llvm-8.0.0
 QDPJIT_DIST=qdp-jit-llvm-nvptx
 CHROMA_DIST=chroma
-QUDA_DIST=quda
+QUDA_DIST=quda_chroma
 EIGEN_DIST=eigen-3.3.4
 
 # Generic directories
