@@ -1,0 +1,5 @@
+QUDA Compilation
+----------------
+In order to successfully compile Quda, I had to make the following changes in CMakeLists.txt:
+i)  Add -G option to QUDA_NVCC_FLAGS
+ii) Add options -G and -mno-float128 to CMAKE_CUDA_FLAGS, and to CMAKE_CUDA_FLAGS_<build_type>, for all build_types
