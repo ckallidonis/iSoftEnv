@@ -127,7 +127,7 @@ echo $LD_LIBRARY_PATH
 ${PKG_SRC}/configure \
           --prefix=${PKG_INSTALL} \
           --with-libxml2=${LIBXML2_INSTALL_GNU} \
-          --with-qmp=${QMP_INSTALL_GNU} \
+          --with-qmp=${QMP_INSTALL} \
           --enable-comm-split-deviceinit \
           --enable-parallel-arch=parscalar \
           --enable-precision="${precision}" \

@@ -46,7 +46,7 @@ mkdir -p ${PKG_INSTALL}
 ###
 ${PKG_SRC}/configure --prefix=${PKG_INSTALL} \
     --with-qdp=${QDPJIT_INSTALL}/${QDPJIT_BTAG} \
-    --with-qmp=${QMP_INSTALL_GNU} \
+    --with-qmp=${QMP_INSTALL} \
     ${OMPENABLE} \
     CC="${PK_CC}"  CXX="${PK_CXX}" \
     CXXFLAGS="${PK_CXXFLAGS} " CFLAGS="${PK_CFLAGS} " \
