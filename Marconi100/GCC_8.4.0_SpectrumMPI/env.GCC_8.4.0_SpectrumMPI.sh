@@ -64,6 +64,8 @@ export JIT_LDFLAGS="${OMPFLAGS} -L${LLVM_INSTALL}/lib -L${PK_CUDA_HOME}/lib64 -L
 export JIT_LIBS="-ldl -pthread" # -lmpich -lmpich_gnu_82"
 export JIT_INC=""
 
+NOJIT_LDFLAGS="${OMPFLAGS} -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${PK_CUDA_HOME}/lib64  -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64"
+
 # Make
 PK_TARGET_JN="8"
 export MAKE="make -j ${PK_TARGET_JN}" 
