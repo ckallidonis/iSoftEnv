@@ -126,7 +126,7 @@ echo $LD_LIBRARY_PATH
 
 ${PKG_SRC}/configure \
           --prefix=${PKG_INSTALL} \
-          --with-libxml2=${LIBXML2_INSTALL_GNU} \
+          --with-libxml2=${LIBXML2_INSTALL} \
           --with-qmp=${QMP_INSTALL} \
           --enable-comm-split-deviceinit \
           --enable-parallel-arch=parscalar \
@@ -141,8 +141,8 @@ ${PKG_SRC}/configure \
           --with-llvm=${LLVM_INSTALL} \
           CXXFLAGS="${PK_CXXFLAGS} ${JIT_INC}" \
           CFLAGS="${PK_CFLAGS} ${JIT_INC}" \
-          LDFLAGS="${JIT_LDFLAGS}" \
-          LIBS="${JIT_LIBS}" \
+          LDFLAGS="${LDFLAGS_JIT}" \
+          LIBS="${LIBS_JIT}" \
           CXX="${PK_CXX}" \
           CC="${PK_CC}" \
           --host=x86_64-linux-gnu --build=none \
