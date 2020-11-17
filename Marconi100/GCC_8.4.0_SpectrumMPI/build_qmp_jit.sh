@@ -37,7 +37,7 @@ mkdir -p ${PKG_INSTALL}
 ${PKG_SRC}/configure --prefix=${PKG_INSTALL} \
     CC="${PK_CC}" \
     CFLAGS="${PK_CFLAGS}" \
-    LDFLAGS="${JIT_LDFLAGS}" \
+    LDFLAGS="${LDFLAGS_JIT}" \
     --host=x86_64-linux-gnu \
     --build=none \
     --with-qmp-comms-type=MPI \

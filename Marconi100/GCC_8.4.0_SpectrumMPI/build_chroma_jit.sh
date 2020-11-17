@@ -50,8 +50,8 @@ ${PKG_SRC}/configure --prefix=${PKG_INSTALL} \
     ${OMPENABLE} \
     CC="${PK_CC}"  CXX="${PK_CXX}" \
     CXXFLAGS="${PK_CXXFLAGS} " CFLAGS="${PK_CFLAGS} " \
-    LDFLAGS="${JIT_LDFLAGS} " \
-    LIBS="-lcublas -lcudart ${JIT_LIBS}" \
+    LDFLAGS="${LDFLAGS_JIT} " \
+    LIBS="-lcublas -lcudart ${LIBS_JIT}" \
     --enable-jit-clover \
     --host=x86_64-linux-gnu --build=none \
     --with-cuda=${PK_CUDA_HOME} \
