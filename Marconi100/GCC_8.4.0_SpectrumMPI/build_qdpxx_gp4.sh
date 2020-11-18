@@ -55,7 +55,7 @@ ${PKG_SRC}/configure \
     CFLAGS="${PK_CFLAGS}" \
     CXX="${PK_CXX}" \
     CC="${PK_CC}" \
-    --with-libxml2=${LIBXML2_INSTALL} \
+    --with-libxml2=${LIBXML2_INSTALL_GP4} \
     --host=x86_64-linux-gnu --build=none \
     ${OMPENABLE}
 
