@@ -4,21 +4,21 @@ BUILD_DIST=XL_16.1.1_SpectrumMPI
 
 
 # Package distribution names
-CHROMA_DIST=chroma-genprop4
+CHROMA_DIST=chroma_gp4
 QMP_DIST=qmp
 QDP_DIST=qdpxx
 QDP3D_DIST=qdpxx_3d
 HADRON_DIST=hadron
 TENSOR_DIST=tensor
-HAROM_DIST=harom
+HAROM_DIST=harom_gp4
 QUDA_DIST=quda_develop
 LIBXML2_DIST=libxml2
 EIGEN_DIST=eigen-3.3.4
 
 # Generic directories
 TOPDIR=/m100_work/Pra21_5389/kallidoc/software
-SRC_TOP=${TOPDIR}/src_genprop4
-INSTALL_TOP=${TOPDIR}/install_genprop4/${BUILD_DIST}
+SRC_TOP=${TOPDIR}/src_gp4
+INSTALL_TOP=${TOPDIR}/install_gp4/${BUILD_DIST}
 
 
 # QMP directories
@@ -56,7 +56,6 @@ LIBXML2_INSTALL=${INSTALL_TOP}/${LIBXML2_DIST}
 # QUDA directories
 QUDA_SRC=${SRC_TOP}/${QUDA_DIST}
 QUDA_INSTALL=${INSTALL_TOP}/${QUDA_DIST}
-QUDA_INSTALL_GCC=/m100_work/Pra21_5389/kallidoc/software/install/GCC_8.4.0_SpectrumMPI/quda_noJIT
 
 # Eigen directories
 EIGEN_SRC=${SRC_TOP}/${EIGEN_DIST}
