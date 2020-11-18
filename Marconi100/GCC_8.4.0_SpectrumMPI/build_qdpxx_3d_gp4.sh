@@ -52,13 +52,13 @@ ${PKG_SRC}/configure \
     --enable-parallel-io \
     --enable-alignment=64 \
     --enable-layout=lexico \
+    --with-libxml2=${LIBXML2_INSTALL_GP4} \
     CXXFLAGS="${PK_CXXFLAGS}" \
     CFLAGS="${PK_CFLAGS}" \
     CXX="${PK_CXX}" \
     CC="${PK_CC}" \
     --host=x86_64-linux-gnu --build=none \
     ${OMPENABLE}
-#    --with-libxml2=${LIBXML2_INSTALL}/bin/xml2-config \
 #    --with-qmp=${QMP_INSTALL_GP4} \
 
 ${MAKE}
