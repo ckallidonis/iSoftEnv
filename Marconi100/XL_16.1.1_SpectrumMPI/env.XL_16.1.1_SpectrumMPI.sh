@@ -3,10 +3,9 @@
 # Set up environment
 module load spectrum_mpi
 module load xl/16.1.1--binary
-module load cuda/10.2
+#module load cuda/10.2
 module load cmake/3.17.1
 module load essl/6.2.1--binary
-#module load lapack/3.9.0--gnu--8.4.0
 
 # Set up compilers and compiler flags
 DIST_DIRECTORIES=/m100/home/userexternal/ckallido/software/util/iSoftEnv/Marconi100/XL_16.1.1_SpectrumMPI/directories.sh
@@ -59,7 +58,7 @@ export PK_HOST_CXXFLAGS="-g -O3 -std=c++14 "
 
 
 # CUDA
-export PK_CUDA_HOME=${CUDA_ROOT}
+export PK_CUDA_HOME=/cineca/prod/opt/compilers/cuda/10.1/none
 export SM=sm_70
 
 export QUDA_LDFLAGS="${OMPFLAGS} -L${PK_CUDA_HOME}/lib64 -L${PK_CUDA_HOME}/nvvm/lib64 -Wl,-rpath=${PK_CUDA_HOME}/lib64  -Wl,-rpath=${PK_CUDA_HOME}/nvvm/lib64"
@@ -71,5 +70,3 @@ export LD_LIBRARY_PATH=$LIBXML2_INSTALL/lib:${LD_LIBRARY_PATH}
 PK_TARGET_JN="8"
 export MAKE="make -j ${PK_TARGET_JN}" 
 export PK_CMAKE=/cineca/prod/opt/tools/cmake/3.17.1/none/bin/cmake
-
-export XL_SpectrumMPI=1
