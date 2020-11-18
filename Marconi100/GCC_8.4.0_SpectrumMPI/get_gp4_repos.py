@@ -13,33 +13,33 @@ class CloneProgress(RemoteProgress):
 
 
 # Repository url's
-Repos = { 'qmp'               : 'git@github.com:usqcd-software/qmp.git',
-          'qdpxx'             : 'git@github.com:usqcd-software/qdpxx.git',
-          'qdpxx_3d'          : 'git@github.com:usqcd-software/qdpxx.git',
-          'tensor'            : 'git@github.com:JeffersonLab/tensor.git',
-          'hadron'            : 'git@github.com:JeffersonLab/hadron.git',
-          'harom-genprop4'    : 'git@github.com:JeffersonLab/harom.git',
-          'chroma-genprop4-orig'   : 'git@github.com:JeffersonLab/chroma.git'}
+Repos = { 'qmp'          : 'git@github.com:usqcd-software/qmp.git',
+          'qdpxx'        : 'git@github.com:usqcd-software/qdpxx.git',
+          'qdpxx_3d'     : 'git@github.com:usqcd-software/qdpxx.git',
+          'tensor'       : 'git@github.com:JeffersonLab/tensor.git',
+          'hadron'       : 'git@github.com:JeffersonLab/hadron.git',
+          'harom_gp4'    : 'git@github.com:JeffersonLab/harom.git',
+          'chroma_gp4'   : 'git@github.com:JeffersonLab/chroma.git'}
 
 
 # Which repos have submodules
-Submodules = { 'qmp'               : False,
-               'qdpxx'             : True,
-               'qdpxx_3d'          : True,
-               'tensor'            : False,
-               'hadron'            : False,
-               'harom-genprop4'    : True,
-               'chroma-genprop4-orig'   : True}
+Submodules = { 'qmp'          : False,
+               'qdpxx'        : True,
+               'qdpxx_3d'     : True,
+               'tensor'       : False,
+               'hadron'       : False,
+               'harom_gp4'    : True,
+               'chroma_gp4'   : True}
 
 
 # Branches to checkout
-Branches = {'qmp'               : 'devel',
-            'qdpxx'             : 'devel',
-            'qdpxx_3d'          : 'devel',
-            'tensor'            : 'master',
-            'hadron'            : 'devel',
-            'harom-genprop4'    : 'shmchroma',
-            'chroma-genprop4-orig'   : 'shmharom'}
+Branches = {'qmp'          : 'devel',
+            'qdpxx'        : 'devel',
+            'qdpxx_3d'     : 'devel',
+            'tensor'       : 'master',
+            'hadron'       : 'devel',
+            'harom_gp4'    : 'shmchroma',
+            'chroma_gp4'   : 'shmharom'}
 
 
 # Parse user-supplied arguments
